@@ -1,0 +1,42 @@
+body {
+    background: #1e1e1e;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+}
+
+canvas {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.card {
+    width: 250px;
+}
+
+canvas {
+    width: 100%;
+}
+
+.status {
+    margin-top: 10px;
+}
+
+.list {
+    text-align: left;
+    max-width: 300px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 70px;
+}
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+<meta charset="UTF-8">
+<title>Smart Home Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<h1>Smart Home Dashboard</h1>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Температура</h3>
+        <canvas id="tempChart"></canvas>
+        <div id="tempText" class="status"></div>
+    </div>
+
+    <div class="card">
+        <h3>Вологість</h3>
+        <canvas id="humChart"></canvas>
+        <div id="humText" class="status"></div>
+    </div>
+
+    <div class="card">
+        <h3>Тиск</h3>
+        <canvas id="presChart"></canvas>
+        <div id="presText" class="status"></div>
+    </div>
+
+    <div class="card">
+        <h3>Якість повітря</h3>
+        <canvas id="airChart"></canvas>
+        <div id="airText" class="status"></div>
+    </div>
+
+</div>
+
+<h2>Гази (MQ-135)</h2>
+
+<div id="gasList" class="list"></div>
+
+<h2>Графік за 7 днів</h2>
+
+<canvas id="weekChart"></canvas>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+
+
+<h2>LED Control</h2>
+
+<input type="color" id="colorPicker">
+
+<select id="modeSelect">
+    <option value="static">Static</option>
+    <option value="rainbow">Rainbow</option>
+    <option value="breathing">Breathing</option>
+    <option value="police">Police</option>
+</select>
+
+<button onclick="sendLED()">Apply</button>
+
+<button onclick="setAutoMode()">
+    AUTO MODE
+</button>
+
+
+
+</body>
+</html>
